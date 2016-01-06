@@ -110,9 +110,7 @@ for block in blocks:
         fileUrl = fileUrl.replace(".csv/preview",".csv")
         title = fileBlock.h2.contents[0]
         titleTest = title.find('Download CSV')
-        if titleTest == None:
-            print 'not a csv'
-        else:
+        if titleTest != None:
             title = title.upper().strip()
             csvYr = title.split(' ')[-1]
             csvYr = csvYr.replace("200","20")
